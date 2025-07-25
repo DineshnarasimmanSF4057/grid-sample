@@ -224,9 +224,9 @@ const vegetables = [
   'POTATO', 
 ];
 
-export const updatedHierarchyOrderData = hierarchyOrderdata.map((order) => ({
+
+export const updatedHierarchyOrderData = hierarchyOrderdata.map((order, index) => ({
   ...order,
-  Vegetable: vegetables[Math.floor(Math.random() * vegetables.length)],
+  Vegetable: vegetables[index % vegetables.length],
 }));
 
-console.log(updatedHierarchyOrderData);
